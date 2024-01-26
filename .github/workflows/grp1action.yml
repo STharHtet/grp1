@@ -13,16 +13,11 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Setup network
-        run: |
-          docker network create --driver bridge group1_action
-          docker pull mongo
-          docker run -d --name mongo-dbserver --network group1_action mongo
-      - name: Build with Maven
-        run: mvn package
-      - name: Build
+      - name: Compile with Maven
+        run: mvn compile
+      - name: Build Docker Image
         run: docker build -t group1_action .
       - name: Run image
-        run: docker run --network group1_action --name semcontainer group1_action
+        run: docker run --name grp1imgcontainer -d group1_action
       - name: view logs
-        run: docker logs semcontainer
+        run: docker logs grp1imgcontainer
