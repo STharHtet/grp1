@@ -5,7 +5,7 @@ This code applies to everyone in the team.
 | No. | Punctuality Policy                     | Penalty  |
 |----:|----------------------------------------|----------|
 | 1.  | Be present at the workplace by 10:45 am | 1 Water bottle |
-| 2.  | Group activities processed till noon   | Warning  |
+| 2.  | Group activities will be processed starting from 12:45 pm | Warning  |
 | 3.  | Work on practical tasks related to the project | -1.5  |
 | 4.  | Inform team before taking leave, except for urgent matters | -1  |
 | 5.  | Inform team through Discord/Telegram for GitHub changes | -3  |
