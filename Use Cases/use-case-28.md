@@ -20,7 +20,7 @@ The system has full access to find the population of the region from the World d
 
 ### Successful End Condition
 
-he system succeeds in generating the current region population table.
+The system succeeds in generating the current region population table.
 
 ### Failed End Condition
 
@@ -43,7 +43,7 @@ The population data in the World database must be accessible for the system to u
 
 ## EXTENSIONS
 
-In step 2 of scenario which extracts the data, if the system stopped working then there will be an error prompt to display where the error has occurred in the program. The user then has the chance to fix the error and run the system again.
+In step 3 of scenario which extracts the data, if the system stopped working then there will be an error prompt to display where the error has occurred in the program. The user then has the chance to fix the error and run the system again.
 
 ## SUB-VARIATIONS
 
