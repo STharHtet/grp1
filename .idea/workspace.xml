@@ -5,23 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4a9ae354-0359-4e07-a294-b9f01262a1ae" name="Changes" comment="Project builds to self-contained JAR with Maven.">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-1.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-10.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-11.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-12.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-13.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-14.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-2.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-3.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-4.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-5.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-6.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-7.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-8.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-9.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-28.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-29.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-30.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Use Cases/use-case-31.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "use-case-diagram",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/juliakhit/IdeaProjects/Grp1/src/main/java/com/napier/grp1/Main.java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;use-case-diagram&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/juliakhit/IdeaProjects/Grp1/src/main/java/com/napier/grp1/Main.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
