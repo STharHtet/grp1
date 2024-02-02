@@ -18,7 +18,7 @@ Primary task.
 
 The demographic researcher has authorized access to the system, which includes the features to extract the required data from its updated World database.
 
-### Successfully End Condition
+### Successful End Condition
 
 The system successfully generates the table of the top 10 populated cities in the world for a report on population growth.
 
@@ -50,7 +50,7 @@ Data availability of the World database and successful system activation to gene
 
 ## EXTENSIONS
 
-	When the system extracts the data from its database, in step 2 of the main scenario, the system will encounter an issue. Then, the error prompt will be displayed indicating the error's location in the program. Then, the user has a chance to fix the error and run the system again.  
+	When the system extracts the data from its database, in step 3 of the main scenario, the system will encounter an issue. Then, the error prompt will be displayed indicating the error's location in the program. Then, the user has a chance to fix the error and run the system again.  
 
 ## SUB-VARIATIONS
 
