@@ -90,5 +90,8 @@ public class Country {
      */
     private int capital;
 
+    /**
+     * City name
+     */
     private String city_name;
 }

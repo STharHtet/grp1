@@ -55,6 +55,10 @@ public class App {
         }
     }
 
+    /**
+     * The following method is to call the classes to be run on the main Java class
+     * @param args
+     */
     public static void main(String[] args)
     {
         // Create new Application

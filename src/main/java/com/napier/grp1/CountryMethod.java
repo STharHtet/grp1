@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 public class CountryMethod {
     /**
-     * For World population
+     * The following method is for World population
      * @param con
      * @return
      */
@@ -30,7 +30,7 @@ public class CountryMethod {
                             + "ORDER BY country.Population DESC ";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
-            // Extract employee information
+            // Extract country information
             ArrayList<Country> countries = new ArrayList<Country>();
             while (rset.next())
             {
@@ -53,7 +53,7 @@ public class CountryMethod {
         }
     }
     /**
-     * For Continent Method
+     * The following method is for Continent population
      */
     public ArrayList<Country> getCountriesByContinent(Connection con, String inContinent)
     {
@@ -71,7 +71,7 @@ public class CountryMethod {
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery();
-            // Extract employee information
+            // Extract country information
             ArrayList<Country> countries = new ArrayList<Country>();
             while (rset.next())
             {
@@ -95,7 +95,7 @@ public class CountryMethod {
     }
 
     /**
-     * The following code is method for the region
+     * The following code is method for region population
      */
     public ArrayList<Country> region_data(Connection con, String regionn)
     {
