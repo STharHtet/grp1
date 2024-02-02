@@ -71,6 +71,7 @@ public class App {
         // Extract country in the world from a class
         ArrayList<Country> countries = cw.getCountry(a.con);
         ArrayList<Country> continents = cw.getCountriesByContinent(a.con, "Asia");
+        ArrayList<Country> region = cw.region_data(a.con,"caribbean");
 
 
         // Printing data
@@ -78,6 +79,8 @@ public class App {
         coutput.printPopulation(countries);
         System.out.println("All the countries in a continent organised by largest population to smallest. (Asia)");
         coutput.printPopulation(continents);
+        System.out.println("All the countries in a region organised by largest population to smallest. (Caribbean)");
+        coutput.printPopulation(region);
 
 
         // Disconnect from database
