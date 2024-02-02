@@ -30,7 +30,7 @@ public class CountryMethod {
                             + "ORDER BY country.Population DESC ";
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
-            // Extract country information
+            // Extract country and city(Name) information
             ArrayList<Country> countries = new ArrayList<Country>();
             while (rset.next())
             {
@@ -71,7 +71,7 @@ public class CountryMethod {
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery();
-            // Extract country information
+            // Extract country and city(Name) information
             ArrayList<Country> countries = new ArrayList<Country>();
             while (rset.next())
             {
@@ -113,7 +113,7 @@ public class CountryMethod {
             stmt.setString(1,regionn);
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery();
-            // Extract employee information
+            // Extract country and city(Name) information
             ArrayList<Country> countries = new ArrayList<Country>();
             while (rset.next())
             {
