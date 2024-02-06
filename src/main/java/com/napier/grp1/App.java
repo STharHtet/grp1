@@ -1,5 +1,10 @@
 package com.napier.grp1;
 
+/**
+ * Importing SQL modules
+ * Importing Array lists to work on
+ * Importing DecimalFormat for decimal numbers
+ */
 import java.sql.*;
 import java.util.ArrayList;
 import java.text.DecimalFormat;
