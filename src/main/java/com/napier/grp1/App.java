@@ -55,6 +55,10 @@ public class App {
         }
     }
 
+    /**
+     * The following method is to call the classes to be run on the main Java class
+     * @param args
+     */
     public static void main(String[] args)
     {
         // Create new Application
@@ -63,17 +67,36 @@ public class App {
         // Connect to database
         a.connect();
 
-        // Create a new country in the word object
-        CountryMethod cw = new CountryMethod();
-        CountryOutput coutput = new CountryOutput();
+        // Create a new city in the word object
+        CityMethod city = new CityMethod();
+        CityOutput cityout = new CityOutput();
 
-        // Array Countries, Region, Continents with the population largest to smallest
-        // Extract country in the world from a class
-        ArrayList<Country> region = cw.region_data(a.con,"caribbean");
+        // Input for Continent, Region, Country and District
+        String input_continent = "Asia";
+        String input_region = "Caribbean";
+        String input_country = "Myanmar";
+        String input_district = "Tokyo-to";
+
+        // Extract cities
+        ArrayList<City> cities = city.getCities(a.con);
+        ArrayList<City> citiesContinent = city.getCitiesByContinent(a.con, input_continent);
+        ArrayList<City> citiesRegion = city.getCitiesByRegion(a.con, input_region);
+        ArrayList<City> citiesCountry = city.getCitiesByCountry(a.con, input_country);
+        ArrayList<City> citiesDistrict = city.getCitiesByDistrict(a.con, input_district);
 
         // Printing data
-        System.out.println("All the countries in a region organised by largest population to smallest. (Caribbean)");
-        coutput.printPopulation(region);
+
+        System.out.println("All the cities in the world organised by largest population to smallest.");
+        cityout.printPopulation(cities);
+        System.out.println("All the cities in a continent organised by largest population to smallest. (" + input_continent + ")");
+        cityout.printPopulation(citiesContinent);
+        System.out.println("All the cities in a region organised by largest population to smallest. (" + input_region + ")");
+        cityout.printPopulation(citiesRegion);
+        System.out.println("All the cities in a country organised by largest population to smallest. (" + input_country + ")");
+        cityout.printPopulation(citiesCountry);
+        System.out.println("All the cities in a district organised by largest population to smallest. (" + input_district + ")");
+        cityout.printPopulation(citiesDistrict);
+
 
         // Disconnect from database
         a.disconnect();
