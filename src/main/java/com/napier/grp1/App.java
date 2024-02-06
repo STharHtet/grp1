@@ -2,7 +2,6 @@ package com.napier.grp1;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 
 public class App {
     /**
@@ -55,6 +54,10 @@ public class App {
         }
     }
 
+    /**
+     * The following method is to call the classes to be run on the main Java class
+     * @param args
+     */
     public static void main(String[] args)
     {
         // Create new Application
@@ -64,16 +67,19 @@ public class App {
         a.connect();
 
         // Create a new country in the word object
-        CountryMethod cw = new CountryMethod();
-        CountryOutput coutput = new CountryOutput();
+        CityMethod city = new CityMethod();
+        CityOutput cityout = new CityOutput();
+
+        // For limit the populated cities
+        int limit = 10;
 
         // Array Countries, Region, Continents with the population largest to smallest
-        // Extract country in the world from a class
-        ArrayList<Country> region = cw.region_data(a.con,"caribbean");
+        // Extract top ten cities
+        ArrayList<City> top_ten_cities = city.getTopTenCities(a.con, limit);
 
         // Printing data
-        System.out.println("All the countries in a region organised by largest population to smallest. (Caribbean)");
-        coutput.printPopulation(region);
+        System.out.println("The top " + limit + " populated cities in the world.");
+        cityout.printPopulation(top_ten_cities);
 
         // Disconnect from database
         a.disconnect();
