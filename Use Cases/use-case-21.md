@@ -31,7 +31,7 @@ Demographic Researcher
 
 ### Trigger
 
-The population data in the World database must be accessible for the system to utilize.
+The organization requests the demographic researcher to make a report about the top 10 populated capital cities that are suitable for tourist visits in a continent.
 
 ## MAIN SUCCESS SCENARIO
 
@@ -39,14 +39,13 @@ The population data in the World database must be accessible for the system to u
 
 2. The system has access to the World Database through fixed value of 10 capital cities and inputting the name of a continent.
 
-3. The system extracts the population information of the capital city in that continent from the given database.
+3. The system extracts and sorts the top 10 capital cities which have the most population growth that is suitable for tourist visit in that continent.
 
-4. The system sorts the top 10 capital cities which have the most population growth that is suitable for tourist visit in that continent.
-
-5. The system generates the table of the top 10 populated capital cities that are suitable for tourist visit in that continent.
+4. The system generates the table of the top 10 populated capital cities that are suitable for tourist visit in that continent.
 
 ## EXTENSIONS
-	In step 2 of scenario which extracts the data, if the system stopped working then there will be an error prompt to display where the error has occurred in the program. The user then has the chance to fix the error and run the system again.  
+
+In the step 3 of scenario which extract the data, if the system cannot extract the data, then the user has to run the program again.
 
 ## SUB-VARIATIONS
 

@@ -32,7 +32,7 @@ Demographic researcher.
 
 ### Trigger
 
-The population data in the World database must be accessible for the system to utilize.
+The organization request the demographic researcher to make a report on the current population of the inputted district.
 
 ## MAIN SUCCESS SCENARIO
 
@@ -43,7 +43,7 @@ The population data in the World database must be accessible for the system to u
 
 ## EXTENSIONS
 
-In step 3 of scenario which extracts the data, if the system stopped working then there will be an error prompt to display where the error has occurred in the program. The user then has the chance to fix the error and run the system again.
+In the step 3 of scenario which extract the data, if the system cannot extract the data, then the user has to run the program again.
 
 ## SUB-VARIATIONS
 
