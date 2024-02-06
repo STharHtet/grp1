@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class CountryOutput {
     /**
      * Prints a list of World sorted by population.
-     * @param dataoutput The list of countries to print.
+     * @param dataoutput The list of countries to print.A
      */
     public void printPopulation(ArrayList<Country> dataoutput)
     {
@@ -34,5 +34,5 @@ public class CountryOutput {
         // Print bottom border
         System.out.println("+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+--");
     }
-}
 
+}
