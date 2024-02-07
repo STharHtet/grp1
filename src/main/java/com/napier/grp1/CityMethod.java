@@ -7,10 +7,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class CityMethod {
-//
+
+    //Method to catch and sort all cities data with the inputted district from the database
     public ArrayList<City> getCitiesByDistrict(Connection con, String cityDistrict) {
         try {
-
 
             // Create string for SQL statement
             String strSelect =
