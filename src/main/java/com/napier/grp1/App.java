@@ -73,6 +73,8 @@ public class App {
 
         // Input for Continent
         String input_continent = "Asia";
+        // Input for Region
+        String input_region = "Caribbean";
 
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
@@ -81,6 +83,9 @@ public class App {
         ArrayList<Country> region = cw.region_data(a.con,"caribbean");
         // Extract top ten countries in the world
         ArrayList<Country> tenCountries = cw.getTenCountry(a.con);
+        // Extract top ten countries from the region
+        ArrayList<Country> tenRegions = cw.getTenCountriesByRegion(a.con,input_region);
+
 
 
         // Printing data
@@ -98,6 +103,10 @@ public class App {
         //Print Data of top 10 populated countries in a continent
         System.out.println("The top 10 populated countries in a continent. (" + input_continent + ")");
         coutput.printPopulation(tenContinents);
+        // Printing data of top 10 populated countries in a region
+        System.out.println("The top 10 populated countries in a region. (" + input_region + ")");
+        coutput.printPopulation(tenRegions);
+
 
 
         // Disconnect from database
