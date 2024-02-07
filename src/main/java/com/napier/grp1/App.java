@@ -84,7 +84,7 @@ public class App {
 
 //        Print Data
 
-          System.out.println("The top 10 populated countries in a continent. (Asia)");
+          System.out.println("The top 10 populated countries in a continent. (\" + input_continent + \")");
           coutput.printPopulation(tenContinents);
 //
         // Disconnect from database
