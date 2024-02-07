@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class CityMethod {
 
+    //Method to catch and sort all cities data with the inputted continent from the database
     public ArrayList<City> getCitiesByContinent(Connection con, String cityContinent) {
         try {
-
 
             // Create string for SQL statement
             String strSelect =
