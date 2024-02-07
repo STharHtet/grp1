@@ -19,7 +19,7 @@ public class CountryOutput {
         // Print header-bottom border
         System.out.println("+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+---------------------+--");
 
-        // Loop over all employees in the list
+        // Loop over all countries in the list
         for (Country count : dataoutput)
         {
             // Format population with commas and three decimal places

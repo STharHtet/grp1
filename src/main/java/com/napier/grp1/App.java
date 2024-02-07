@@ -74,18 +74,16 @@ public class App {
         // Input for Region
         String input_region = "Caribbean";
 
-
-
-        // Extract top ten countries
+        // Extract top ten countries from the region
         ArrayList<Country> tenRegions = cw.getTenCountriesByRegion(a.con,input_region);
 
 
-        // Printing data
+        // Printing data of top 10 populated countries in a region
 
         System.out.println("The top 10 populated countries in a region. (" + input_region + ")");
         coutput.printPopulation(tenRegions);
 
-//
+
         // Disconnect from database
         a.disconnect();
     }
