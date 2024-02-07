@@ -72,7 +72,7 @@ public class App {
         CountryOutput coutput = new CountryOutput();
 
 
-        // Extract top ten countries
+        // Extract top ten countries in the world
         ArrayList<Country> tenCountries = cw.getTenCountry(a.con);
 
         // Printing data
