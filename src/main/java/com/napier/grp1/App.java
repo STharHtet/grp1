@@ -85,6 +85,7 @@ public class App {
         // For limit the populated cities
         int limit = 10;
 
+
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
         ArrayList<Country> countries = cw.getCountry(a.con);
@@ -108,6 +109,8 @@ public class App {
         ArrayList<City> citiesDistrict = city.getCitiesByDistrict(a.con, input_district);
         // Extract top ten cities by world
         ArrayList<City> top_ten_cities = city.getTopTenCities(a.con, limit);
+        // Extract top ten cities by continent
+        ArrayList<City> top_ten_cities_continent = city.getTopTenCitiesByContinent(a.con, input_continent, limit);
 
 
         // Printing data
@@ -144,8 +147,8 @@ public class App {
         // Printing data of top N populated cities in the world.
         System.out.println("The top " + limit + " populated cities in the world.");
         cityout.printPopulation(top_ten_cities);
-
-
+        System.out.println("The top " +  limit + " populated cities in a continent. (" + input_continent + ")");
+        cityout.printPopulation(top_ten_cities_continent);
 
         // Disconnect from database
         a.disconnect();
