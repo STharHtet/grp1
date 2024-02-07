@@ -7,6 +7,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class CityMethod {
+
+    //Method to catch all cities data (in the world) from the database
     public ArrayList<City> getCities(Connection con) {
         try {
             // Create an SQL statement
