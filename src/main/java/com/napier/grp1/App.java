@@ -80,6 +80,8 @@ public class App {
         String input_region = "Caribbean";
         // Input for Country
         String input_country = "Myanmar";
+        // Input for District
+        String input_district = "Tokyo-to";
 
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
@@ -100,7 +102,8 @@ public class App {
         ArrayList<City> citiesRegion = city.getCitiesByRegion(a.con, input_region);
         // Extract cities by inputted country
         ArrayList<City> citiesCountry = city.getCitiesByCountry(a.con, input_country);
-
+        // Extract cities by inputted continent
+        ArrayList<City> citiesDistrict = city.getCitiesByDistrict(a.con, input_district);
 
         // Printing data
         System.out.println("All the countries in the world organised by largest population to smallest.");
@@ -130,7 +133,9 @@ public class App {
         // Printing data of all cities in the world by inputted country
         System.out.println("All the cities in a country organised by largest population to smallest. (" + input_country + ")");
         cityout.printPopulation(citiesCountry);
-
+        // Printing data of all cities in the world by inputted district
+        System.out.println("All the cities in a district organised by largest population to smallest. (" + input_district + ")");
+        cityout.printPopulation(citiesDistrict);
 
 
         // Disconnect from database
