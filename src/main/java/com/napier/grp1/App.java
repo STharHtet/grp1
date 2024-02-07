@@ -70,6 +70,9 @@ public class App {
         // Create a new country in the word object
         CountryMethod cw = new CountryMethod();
         CountryOutput coutput = new CountryOutput();
+        // Create a new city in the word object
+        CityMethod city = new CityMethod();
+        CityOutput cityout = new CityOutput();
 
         // Input for Continent
         String input_continent = "Asia";
@@ -83,8 +86,12 @@ public class App {
         ArrayList<Country> region = cw.region_data(a.con,"caribbean");
         // Extract top ten countries in the world
         ArrayList<Country> tenCountries = cw.getTenCountry(a.con);
+        //Extract top ten countries from the continent
+        ArrayList<Country> tenContinents = cw.getTenCountriesByContinent(a.con,input_continent);
         // Extract top ten countries from the region
         ArrayList<Country> tenRegions = cw.getTenCountriesByRegion(a.con,input_region);
+        // Extract cities by world
+        ArrayList<City> cities = city.getCities(a.con);
 
 
 
@@ -98,14 +105,16 @@ public class App {
         // Printing data of the top 10 populated countries in the world
         System.out.println("The top 10 populated countries in the world.");
         coutput.printPopulation(tenCountries);
-        //Extract top ten countries from the continent
-        ArrayList<Country> tenContinents = cw.getTenCountriesByContinent(a.con,input_continent);
         //Print Data of top 10 populated countries in a continent
         System.out.println("The top 10 populated countries in a continent. (" + input_continent + ")");
         coutput.printPopulation(tenContinents);
         // Printing data of top 10 populated countries in a region
         System.out.println("The top 10 populated countries in a region. (" + input_region + ")");
         coutput.printPopulation(tenRegions);
+        // Printing data of all cities in the world
+        System.out.println("All the cities in the world organised by largest population to smallest.");
+        cityout.printPopulation(cities);
+
 
 
 
