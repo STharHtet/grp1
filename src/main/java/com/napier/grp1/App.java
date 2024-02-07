@@ -77,21 +77,22 @@ public class App {
         String input_region = "Caribbean";
         String input_country = "Myanmar";
         String input_district = "Tokyo-to";
+        int limit = 10;
 
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract top ten capital cities
-        ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con);
-        ArrayList<CapCity> top_ten_capcities_continent = capcity.getTopTenCapCitiesByContinent(a.con, input_continent, 10);
-        ArrayList<CapCity> top_ten_capcities_region = capcity.getTopTenCapCitiesByRegion(a.con, input_region);
+        ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con, limit);
+        // ArrayList<CapCity> top_ten_capcities_continent = capcity.getTopTenCapCitiesByContinent(a.con, input_continent, limit);
+        // ArrayList<CapCity> top_ten_capcities_region = capcity.getTopTenCapCitiesByRegion(a.con, input_region, limit);
 
 
         // Printing data
         System.out.println("The top 10 populated capital cities in the world.");
         capcityout.printPopulation(top_ten_capcities);
-        System.out.println("The top 10 populated capital cities in a continent. (" + input_continent + ")");
-        capcityout.printPopulation(top_ten_capcities_continent);
-        System.out.println("The top 10 populated capital cities in a region. (" + input_region + ")");
-        capcityout.printPopulation(top_ten_capcities_region);
+        // System.out.println("The top 10 populated capital cities in a continent. (" + input_continent + ")");
+        // capcityout.printPopulation(top_ten_capcities_continent);
+        // System.out.println("The top 10 populated capital cities in a region. (" + input_region + ")");
+        // capcityout.printPopulation(top_ten_capcities_region);
 
 
         // Disconnect from database
