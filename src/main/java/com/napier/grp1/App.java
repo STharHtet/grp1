@@ -111,6 +111,8 @@ public class App {
         ArrayList<City> top_ten_cities = city.getTopTenCities(a.con, limit);
         // Extract top ten cities by continent
         ArrayList<City> top_ten_cities_continent = city.getTopTenCitiesByContinent(a.con, input_continent, limit);
+        // Extract top ten cities by region
+        ArrayList<City> top_ten_cities_region = city.getTopTenCitiesByRegion(a.con, input_region, limit);
 
 
         // Printing data
@@ -149,6 +151,9 @@ public class App {
         cityout.printPopulation(top_ten_cities);
         System.out.println("The top " +  limit + " populated cities in a continent. (" + input_continent + ")");
         cityout.printPopulation(top_ten_cities_continent);
+        System.out.println("The top" + limit + " populated cities in a region. (" + input_region + ")");
+        cityout.printPopulation(top_ten_cities_region);
+
 
         // Disconnect from database
         a.disconnect();
