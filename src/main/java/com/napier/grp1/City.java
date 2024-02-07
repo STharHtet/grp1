@@ -16,6 +16,10 @@ public class City {
 
     private String city_region;
 
+    /**
+     * Generate Getter and Setter
+     * @return
+     */
     public String getCity_region() {
         return city_region;
     }
