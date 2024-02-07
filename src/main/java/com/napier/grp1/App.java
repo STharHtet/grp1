@@ -71,25 +71,13 @@ public class App {
         CountryMethod cw = new CountryMethod();
         CountryOutput coutput = new CountryOutput();
 
-        // Input for Continent, Region, Country and District
-        String input_continent = "Asia";
-        String input_region = "Caribbean";
-        String input_country = "Myanmar";
-        String input_district = "Tokyo-to";
 
         // Extract top ten countries
         ArrayList<Country> tenCountries = cw.getTenCountry(a.con);
-        ArrayList<Country> tenContinents = cw.getTenCountriesByContinent(a.con, input_continent);
-        ArrayList<Country> tenRegions = cw.getTenCountriesByRegion(a.con, input_region);
 
+        // Printing data
         System.out.println("The top 10 populated countries in the world.");
         coutput.printPopulation(tenCountries);
-        System.out.println("The top 10 populated countries in a continent. (Asia)");
-        coutput.printPopulation(tenContinents);
-        System.out.println("The top 10 populated countries in a region. (Caribbean)");
-        coutput.printPopulation(tenRegions);
-
-
 
         // Disconnect from database
         a.disconnect();
