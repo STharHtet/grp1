@@ -71,6 +71,9 @@ public class App {
         CountryMethod cw = new CountryMethod();
         CountryOutput coutput = new CountryOutput();
 
+        // Input for Continent
+        String input_continent = "Asia";
+
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
         ArrayList<Country> countries = cw.getCountry(a.con);
@@ -90,6 +93,11 @@ public class App {
         // Printing data of the top 10 populated countries in the world
         System.out.println("The top 10 populated countries in the world.");
         coutput.printPopulation(tenCountries);
+        //Extract top ten countries from the continent
+        ArrayList<Country> tenContinents = cw.getTenCountriesByContinent(a.con,input_continent);
+        //Print Data of top 10 populated countries in a continent
+        System.out.println("The top 10 populated countries in a continent. (" + input_continent + ")");
+        coutput.printPopulation(tenContinents);
 
 
         // Disconnect from database
