@@ -75,7 +75,7 @@ public class App {
         // Extract top ten countries in the world
         ArrayList<Country> tenCountries = cw.getTenCountry(a.con);
 
-        // Printing data
+        // Printing data of the top 10 populated countries in the world
         System.out.println("The top 10 populated countries in the world.");
         coutput.printPopulation(tenCountries);
 
