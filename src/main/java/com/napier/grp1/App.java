@@ -78,8 +78,6 @@ public class App {
         String input_continent = "Asia";
         // Input for Region
         String input_region = "Caribbean";
-        // Input for Continent, Region, Country and District
-        String input_continent = "Europe";
 
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
