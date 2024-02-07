@@ -7,12 +7,15 @@ import java.sql.Statement;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * For calling the method for SQL statement
+ */
 public class CountryMethod {
 
     /**
-     * The following code is method for the region
+     * The following method is for Continent population
      */
-    public ArrayList<Country> region_data(Connection con, String regionn)
+    public ArrayList<Country> getTenCountriesByContinent(Connection con, String inContinent)
     {
         try
         {
@@ -20,15 +23,15 @@ public class CountryMethod {
             String strSelect =
                     "SELECT country.Code, country.Name, country.Continent, country.Region, country.Population, city.Name "
                             + "FROM country, city "
-                            + "WHERE country.Capital = city.ID AND country.Region = ? "
-                            + "ORDER BY Region ASC ,Population DESC ";
-
+                            + "WHERE country.Capital = city.ID AND country.Continent = ?"
+                            + "ORDER BY country.Population DESC LIMIT 10 ";
             // Create an SQL statement
             PreparedStatement stmt = con.prepareStatement(strSelect);
-            stmt.setString(1,regionn);
+            stmt.setString(1,inContinent);
+
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery();
-            // Extract employee information
+            // Extract country and city(Name) information
             ArrayList<Country> countries = new ArrayList<Country>();
             while (rset.next())
             {
@@ -50,5 +53,5 @@ public class CountryMethod {
             return null;
         }
     }
-}
 
+}
