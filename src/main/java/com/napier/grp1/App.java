@@ -122,10 +122,12 @@ public class App {
         ArrayList<City> top_ten_cities_country = city.getTopTenCitiesByCountry(a.con, input_country, limit);
         // Extract top ten cities by district
         ArrayList<City> top_ten_cities_district = city.getTopTenCitiesByDistrict(a.con, input_district, limit);
-        // For HHS
         // Extract capital cities in the world
         ArrayList<CapCity> capcities = capcity.getCapCities(a.con);
+        // Extract capital cities in the continent
         ArrayList<CapCity> capcitiesContinent = capcity.getCapCitiesByContinent(a.con, input_continent);
+        // Extract capital cities in the region
+        ArrayList<CapCity> capcitiesRegion = capcity.getCapCitiesByRegion(a.con, input_region);
         // Extract top ten capital cities by world
         ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con, limit);
         // Extract top ten capital cities by continent
@@ -180,14 +182,15 @@ public class App {
         // Printing data of top N populated cities in the district.
         System.out.println("The top " + limit + " populated cities in a district. (" + input_district + ")");
         cityout.printPopulation(top_ten_cities_district);
-        //For HHS
         // Printing data of capital cities in the world
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
         capcityout.printPopulation(capcities);
         // Printing data of capital cities in the continent
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
         capcityout.printPopulation(capcitiesContinent);
-
+        // Printing data of capital cities in the region
+        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        capcityout.printPopulation(capcitiesRegion);
         // Printing data of top N populated capital cities in the world.
         System.out.println("The top 10 populated capital cities in the world.");
         capcityout.printPopulation(top_ten_capcities);
