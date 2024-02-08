@@ -186,10 +186,10 @@ public class App {
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
         capcityout.printPopulation(capcities);
         // Printing data of capital cities in the continent
-        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        System.out.println("All the capital cities in the continent organised by largest population to smallest. (" + input_continent + ")");
         capcityout.printPopulation(capcitiesContinent);
         // Printing data of capital cities in the region
-        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        System.out.println("All the capital cities in the region organised by largest population to smallest. (" + input_region + ")");
         capcityout.printPopulation(capcitiesRegion);
         // Printing data of top N populated capital cities in the world.
         System.out.println("The top 10 populated capital cities in the world.");
