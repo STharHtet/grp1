@@ -72,12 +72,15 @@ public class App {
         CapCityMethod capcity = new CapCityMethod();
         CapCityOutput capcityout = new CapCityOutput();
 
+        // Input for Continent, Region, Country and District
+        String input_region = "Caribbean";
+
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract capital cities
-        ArrayList<CapCity> capcities = capcity.getCapCities(a.con);
+        ArrayList<CapCity> capcitiesRegion = capcity.getCapCitiesByRegion(a.con, input_region);
 
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
-        capcityout.printPopulation(capcities);
+        capcityout.printPopulation(capcitiesRegion);
 
         // Disconnect from database
         a.disconnect();
