@@ -32,7 +32,7 @@ Demographic Researcher
 
 ### Trigger
 
-The population data in the World database must be accessible for the system to utilize.
+The organization requests the demographic researcher to make a report about trends that affect the population growth of all the capital cities in the world.
 
 ## MAIN SUCCESS SCENARIO
 
@@ -40,14 +40,13 @@ The population data in the World database must be accessible for the system to u
 
 2. The system has access to the World Database.
 
-3. The system extracts the population information of the world from the given database.
+3. The system extracts and sorts the largest to smallest population of all the capital cities in the world.
 
-4. The system sorts the largest to smallest population of all the capital cities in the world.
-
-5. The system generates the table of all capital cities in the world sorted from largest to smallest population growth.
+4. The system generates the table of all capital cities in the world sorted from largest to smallest population growth.
 
 ## EXTENSIONS
-	In step 2 of scenario which extracts the data, if the system stopped working then there will be an error prompt to display where the error has occurred in the program. The user then has the chance to fix the error and run the system again.  
+
+In the step 3 of scenario which extract the data, if the system cannot extract the data, then the user has to run the program again.
 
 ## SUB-VARIATIONS
 

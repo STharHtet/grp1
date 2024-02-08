@@ -32,8 +32,7 @@ Demographic Researcher
 
 ### Trigger
 
-Data availability of the World database and successful system activation to generate the requested data.
-
+The organization requests the demographic researcher to make a report about birth rates correlating to populations in  a region.
 
 
 ## MAIN SUCCESS SCENARIO
@@ -47,10 +46,9 @@ Data availability of the World database and successful system activation to gene
 4. The system generates a table of 10 countries that are the most populated within that specified region.
 
 
-
 ## EXTENSIONS
 
-	When the system extracts the data from its database, in step 3 of the main scenario, the system will encounter an issue. Then, the error prompt will be displayed indicating the error's location in the program. Then, the user has a chance to fix the error and run the system again.  
+In the step 3 of scenario which extract the data, if the system cannot extract the data, then the user has to run the program again.   
 
 ## SUB-VARIATIONS
 

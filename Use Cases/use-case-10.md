@@ -32,8 +32,7 @@ Demographic Researcher
 
 ### Trigger
 
-Data availability of the World database and successful system activation to generate the requested data.
-
+The organization requests the demographic researcher to make a report on what are the most populated and least populated cities in a country.
 
 
 ## MAIN SUCCESS SCENARIO
@@ -42,17 +41,15 @@ Data availability of the World database and successful system activation to gene
 
 2. The system is activated to get access to the World database, and the name of a country is inserted as an input.
 
-3. The system extracts only the data related to all the cities within a specified country from its database.
+3. The system extracts and sorts only the data related to all the cities within a specified country from its database.
 
-4. The system then sorts all those cities from largest population to smallest.
-
-5. The system generates a table of cities sorted from largest population to smallest within that specified country.
+4. The system generates a table of cities sorted from largest population to smallest within that specified country.
 
 
 
 ## EXTENSIONS
 
-	When the system extracts the data from its database, in step 3 of the main scenario, the system will encounter an issue. Then, the error prompt will be displayed indicating the error's location in the program. Then, the user has a chance to fix the error and run the system again.  
+When the system extracts the data from its database, in step 3 of the main scenario, the system will encounter an issue. Then, the error prompt will be displayed indicating the error's location in the program. Then, the user has a chance to fix the error and run the system again.  
 
 ## SUB-VARIATIONS
 
