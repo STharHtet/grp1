@@ -2,7 +2,6 @@ package com.napier.grp1;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 
 public class App {
     /**
