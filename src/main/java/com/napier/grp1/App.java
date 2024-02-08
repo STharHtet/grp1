@@ -2,18 +2,17 @@ package com.napier.grp1;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 
 public class App {
     /**
      * Connection to MySQL database.
      */
-    private Connection con = null;
+    public Connection con = null;
 
     /**
      * Connect to the MySQL database.
      */
-    public void connect() {
+    public void connect(String location, int delay) {
         try {
             // Load Database driver
             Class.forName("com.mysql.cj.jdbc.Driver");
@@ -29,7 +28,7 @@ public class App {
                 // Wait a bit for db to start
                 Thread.sleep(30000);
                 // Connect to database
-                con = DriverManager.getConnection("jdbc:mysql://db:3306/world?useSSL=false", "root", "example");
+                con = DriverManager.getConnection("jdbc:mysql://"+ location +"/world?allowPublicKeyRetrieval=true&useSSL=false", "root", "example");
                 System.out.println("Successfully connected");
                 break;
             } catch (SQLException sqle) {
@@ -55,25 +54,30 @@ public class App {
         }
     }
 
+    /**
+     * The following method is to call the classes to be run on the main Java class
+     * @param args
+     */
     public static void main(String[] args)
     {
         // Create new Application
         App a = new App();
+        if (args.length < 1) {
+            a.connect("localhost:33060", 30000);
+        }else {
+            a.connect(args[0], Integer.parseInt(args[1]));
+        }
 
-        // Connect to database
-        a.connect();
-
-        // Create a new country in the word object
-        CountryMethod cw = new CountryMethod();
-        CountryOutput coutput = new CountryOutput();
+        // Create a new capital city in the word object
+        CapCityMethod capcity = new CapCityMethod();
+        CapCityOutput capcityout = new CapCityOutput();
 
         // Array Countries, Region, Continents with the population largest to smallest
-        // Extract country in the world from a class
-        ArrayList<Country> region = cw.region_data(a.con,"caribbean");
+        // Extract capital cities
+        ArrayList<CapCity> capcities = capcity.getCapCities(a.con);
 
-        // Printing data
-        System.out.println("All the countries in a region organised by largest population to smallest. (Caribbean)");
-        coutput.printPopulation(region);
+        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        capcityout.printPopulation(capcities);
 
         // Disconnect from database
         a.disconnect();
