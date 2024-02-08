@@ -72,6 +72,10 @@ public class App {
         // Create a new city in the word object
         CityMethod city = new CityMethod();
         CityOutput cityout = new CityOutput();
+        // Create a new capital city in the word object
+        CapCityMethod capcity = new CapCityMethod();
+        CapCityOutput capcityout = new CapCityOutput();
+
 
         // Input for Continent
         String input_continent = "Asia";
@@ -116,6 +120,10 @@ public class App {
         ArrayList<City> top_ten_cities_country = city.getTopTenCitiesByCountry(a.con, input_country, limit);
         // Extract top ten cities by district
         ArrayList<City> top_ten_cities_district = city.getTopTenCitiesByDistrict(a.con, input_district, limit);
+        // For HHS
+
+        // Extract top ten capital cities
+        ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con, limit);
 
 
         // Printing data
@@ -164,6 +172,11 @@ public class App {
         // Printing data of top N populated cities in the district.
         System.out.println("The top " + limit + " populated cities in a district. (" + input_district + ")");
         cityout.printPopulation(top_ten_cities_district);
+        //For HHS
+
+        // Printing data of top N populated capital cities in the world.
+        System.out.println("The top 10 populated capital cities in the world.");
+        capcityout.printPopulation(top_ten_capcities);
 
 
 
