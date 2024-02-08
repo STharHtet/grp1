@@ -114,6 +114,8 @@ public class App {
         ArrayList<City> top_ten_cities_region = city.getTopTenCitiesByRegion(a.con, input_region, limit);
         // Extract top ten cities by county
         ArrayList<City> top_ten_cities_country = city.getTopTenCitiesByCountry(a.con, input_country, limit);
+        // Extract top ten cities by district
+        ArrayList<City> top_ten_cities_district = city.getTopTenCitiesByDistrict(a.con, input_district, limit);
 
 
         // Printing data
@@ -159,6 +161,10 @@ public class App {
         // Printing data of top N populated cities in the country.
         System.out.println("The top " + limit + " populated cities in a country. (" + input_country + ")");
         cityout.printPopulation(top_ten_cities_country);
+        // Printing data of top N populated cities in the district.
+        System.out.println("The top " + limit + " populated cities in a district. (" + input_district + ")");
+        cityout.printPopulation(top_ten_cities_district);
+
 
 
         // Disconnect from database
