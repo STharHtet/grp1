@@ -68,16 +68,19 @@ public class App {
             a.connect(args[0], Integer.parseInt(args[1]));
         }
 
+        // Input for Continent, Region, Country and District
+        String input_continent = "Asia";
+
         // Create a new capital city in the word object
         CapCityMethod capcity = new CapCityMethod();
         CapCityOutput capcityout = new CapCityOutput();
 
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract capital cities
-        ArrayList<CapCity> capcities = capcity.getCapCities(a.con);
+        ArrayList<CapCity> capcitiesContinent = capcity.getCapCitiesByContinent(a.con, input_continent);
 
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
-        capcityout.printPopulation(capcities);
+        capcityout.printPopulation(capcitiesContinent);
 
         // Disconnect from database
         a.disconnect();
