@@ -122,10 +122,12 @@ public class App {
         ArrayList<City> top_ten_cities_district = city.getTopTenCitiesByDistrict(a.con, input_district, limit);
         // For HHS
 
-        // Extract top ten capital cities
+        // Extract top ten capital cities by world
         ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con, limit);
-        // Extract top ten capital cities
+        // Extract top ten capital cities by continent
         ArrayList<CapCity> top_ten_capcities_continent = capcity.getTopTenCapCitiesByContinent(a.con, input_continent, limit);
+        // Extract top ten capital cities by region
+        ArrayList<CapCity> top_ten_capcities_region = capcity.getTopTenCapCitiesByRegion(a.con, input_region, limit);
 
 
         // Printing data
@@ -182,6 +184,9 @@ public class App {
         // Printing data of top N populated capital cities in the continent.
         System.out.println("The top 10 populated capital cities in a continent. (" + input_continent + ")");
         capcityout.printPopulation(top_ten_capcities_continent);
+        // Printing data of top N populated capital cities in the region.
+        System.out.println("The top 10 populated capital cities in a region. (" + input_region + ")");
+        capcityout.printPopulation(top_ten_capcities_region);
 
 
 
