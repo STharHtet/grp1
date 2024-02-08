@@ -42,8 +42,5 @@ public class CountryOutput {
         catch (Exception e){
             System.out.println("Error occurred because " + e);
         }
-
-
     }
-
 }
