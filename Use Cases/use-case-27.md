@@ -55,4 +55,4 @@ None.
 
 ## SCHEDULE
 
-**DUE DATE**: [9th Feb 2024] Release v0.3
+**DUE DATE**: [16th Feb 2024] Release v0.4 
