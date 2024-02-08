@@ -2,7 +2,6 @@ package com.napier.grp1;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.text.DecimalFormat;
 
 public class App {
     /**
@@ -126,6 +125,7 @@ public class App {
         // For HHS
         // Extract capital cities in the world
         ArrayList<CapCity> capcities = capcity.getCapCities(a.con);
+        ArrayList<CapCity> capcitiesContinent = capcity.getCapCitiesByContinent(a.con, input_continent);
         // Extract top ten capital cities by world
         ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con, limit);
         // Extract top ten capital cities by continent
@@ -184,6 +184,9 @@ public class App {
         // Printing data of capital cities in the world
         System.out.println("All the capital cities in the world organised by largest population to smallest.");
         capcityout.printPopulation(capcities);
+        // Printing data of capital cities in the continent
+        System.out.println("All the capital cities in the world organised by largest population to smallest.");
+        capcityout.printPopulation(capcitiesContinent);
 
         // Printing data of top N populated capital cities in the world.
         System.out.println("The top 10 populated capital cities in the world.");
