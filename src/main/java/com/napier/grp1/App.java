@@ -97,11 +97,11 @@ public class App {
         ArrayList<Country> continents = cw.getCountriesByContinent(a.con, "Asia");
         ArrayList<Country> region = cw.region_data(a.con,"caribbean");
         // Extract top ten countries in the world
-        ArrayList<Country> tenCountries = cw.getTenCountry(a.con);
+        ArrayList<Country> tenCountries = cw.getTenCountry(a.con, limit);
         //Extract top ten countries from the continent
-        ArrayList<Country> tenContinents = cw.getTenCountriesByContinent(a.con,input_continent);
+        ArrayList<Country> tenContinents = cw.getTenCountriesByContinent(a.con, input_continent, limit);
         // Extract top ten countries from the region
-        ArrayList<Country> tenRegions = cw.getTenCountriesByRegion(a.con,input_region);
+        ArrayList<Country> tenRegions = cw.getTenCountriesByRegion(a.con, input_region, limit);
         // Extract cities by world
         ArrayList<City> cities = city.getCities(a.con);
         // Extract cities by inputted continent
