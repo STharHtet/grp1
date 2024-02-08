@@ -124,6 +124,8 @@ public class App {
 
         // Extract top ten capital cities
         ArrayList<CapCity> top_ten_capcities = capcity.getTopTenCapCities(a.con, limit);
+        // Extract top ten capital cities
+        ArrayList<CapCity> top_ten_capcities_continent = capcity.getTopTenCapCitiesByContinent(a.con, input_continent, limit);
 
 
         // Printing data
@@ -177,6 +179,9 @@ public class App {
         // Printing data of top N populated capital cities in the world.
         System.out.println("The top 10 populated capital cities in the world.");
         capcityout.printPopulation(top_ten_capcities);
+        // Printing data of top N populated capital cities in the continent.
+        System.out.println("The top 10 populated capital cities in a continent. (" + input_continent + ")");
+        capcityout.printPopulation(top_ten_capcities_continent);
 
 
 
