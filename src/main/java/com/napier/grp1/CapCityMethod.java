@@ -6,7 +6,23 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+/**
+ * The following class is where all the CapCityMethods are stored in.
+ * The App class (main class) would call these methods from the class
+ * in order to work with them
+ */
 public class CapCityMethod {
+
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from CapCity class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the city name, country name and city
+     * population and sorts the data by population in descending order
+     * (largest to smallest population). The method extracts all capital
+     * cities in the world
+     * @param con is used to attempting connection with the database
+     */
     public ArrayList<CapCity> getCapCities(Connection con)
     {
         try
@@ -41,6 +57,18 @@ public class CapCityMethod {
         }
     }
 
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from CapCity class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the city name, country name and city
+     * population and sorts the data by population in descending order
+     * (largest to smallest population). The method extracts all capital
+     * cities based on continent.
+     * @param con is used to attempting connection with the database
+     * @param capCityContinent is used in order to take input for which
+     * continent to be made use of for the table to sorted with.
+     */
     public ArrayList<CapCity> getCapCitiesByContinent(Connection con, String capCityContinent)
     {
         try
@@ -78,6 +106,18 @@ public class CapCityMethod {
         }
     }
 
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from CapCity class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the city name, country name and city
+     * population and sorts the data by population in descending order
+     * (largest to smallest population). The method extracts capital
+     * cities based on region.
+     * @param con is used to attempting connection with the database
+     * @param capCityRegion is used in order to take input for which
+     * region to be made use of for the table to sorted with.
+     */
     public ArrayList<CapCity> getCapCitiesByRegion(Connection con, String capCityRegion)
     {
         try
@@ -114,7 +154,18 @@ public class CapCityMethod {
             return null;
         }
     }
-    // Method for Top 10 populated capital cities in the world.
+
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from CapCity class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the city name, country name and city
+     * population and sorts the data by population in descending order
+     * (largest to smallest population). The method extracts N number
+     * of capital cities.
+     * @param con is used to attempting connection with the database
+     * @param lim defines the N number of cities
+     */
     public ArrayList<CapCity> getTopTenCapCities(Connection con, int lim)
     {
         try
@@ -149,7 +200,19 @@ public class CapCityMethod {
         }
     }
 
-    // Method for Top 10 populated capital cities in a continent.
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from CapCity class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the city name, country name and city
+     * population and sorts the data by population in descending order
+     * (largest to smallest population). The method extracts N number
+     * of capital cities based on the continent.
+     * @param con is used to attempting connection with the database
+     * @param capCityContinent is used in order to take input for which
+     * continent to be made use of for the table to sorted with.
+     * @param lim defines the N number of cities
+     */
     public ArrayList<CapCity> getTopTenCapCitiesByContinent(Connection con, String capCityContinent, int lim)
     {
         try
@@ -188,7 +251,19 @@ public class CapCityMethod {
         }
     }
 
-    // Method for Top 10 populated capital cities in a region.
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from CapCity class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the city name, country name and city
+     * population and sorts the data by population in descending order
+     * (largest to smallest population). The method extracts N number
+     * of capital cities based on the region.
+     * @param con is used to attempting connection with the database
+     * @param capCityRegion is used in order to take input for which
+     * region to be made use of for the table to sorted with.
+     * @param lim defines the N number of cities
+     */
     public ArrayList<CapCity> getTopTenCapCitiesByRegion(Connection con, String capCityRegion, int lim)
     {
         try

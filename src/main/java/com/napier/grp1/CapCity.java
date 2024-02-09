@@ -1,5 +1,12 @@
 package com.napier.grp1;
 
+
+/**
+ * The following class is to create getters and setters for
+ * appropriate variables for CapCityMethod to work with.
+ * Variables have been set to private and
+ * getters and setters have been used for security reasons.
+ */
 public class CapCity {
 
     private String cap_city_name;

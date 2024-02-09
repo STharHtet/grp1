@@ -3,10 +3,17 @@ package com.napier.grp1;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * The following class is to store the method for printing out data
+ * relating to countries
+ */
 public class CountryOutput {
     /**
-     * Prints a list of World sorted by population.
-     * @param dataoutput The list of countries to print.
+     * The following method is to display data from methods used for capital
+     * cities. There are 5 columns which are country code, country name, continent,
+     * region, country population and capital city that will be displayed.
+     * @param dataoutput is take input for which country method data
+     * to be displayed.
      */
     public void printPopulation(ArrayList<Country> dataoutput)
     {

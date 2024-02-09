@@ -1,5 +1,11 @@
 package com.napier.grp1;
 
+/**
+ * The following class is to create getters and setters for
+ * appropriate variables for CityMethod to work with.
+ * Variables have been set to private and
+ * getters and setters have been used for security reasons.
+ */
 public class City {
 
     private String city_name;

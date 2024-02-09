@@ -8,13 +8,20 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 
 /**
- * For calling the method for SQL statement
+ * The following class is where all the CountryMethods are stored in.
+ * The App class (main class) would call these methods from the class
+ * in order to work with them
  */
 public class CountryMethod {
     /**
-     * The following method is for World population
-     * @param con
-     * @return
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from Country class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the country code, country name, country
+     * continent, country region and country population and sorts the
+     * data by population in descending order (largest to smallest population).
+     * The method extracts all countries in the world.
+     * @param con is used to attempting connection with the database
      */
     public ArrayList<Country> getCountry(Connection con)
     {
@@ -53,7 +60,16 @@ public class CountryMethod {
         }
     }
     /**
-     * The following method is for Continent population
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from Country class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the country code, country name, country
+     * continent, country region and country population and sorts the
+     * data by population in descending order (largest to smallest population).
+     * The method extracts all countries based on continent.
+     * @param con is used to attempting connection with the database
+     * @param inContinent is used in order to take input for which continent
+     * to be made use of for the table to be sorted with.
      */
     public ArrayList<Country> getCountriesByContinent(Connection con, String inContinent)
     {
@@ -95,7 +111,16 @@ public class CountryMethod {
     }
 
     /**
-     * The following code is method for region population
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from Country class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the country code, country name, country
+     * continent, country region and country population and sorts the
+     * data by population in descending order (largest to smallest population).
+     * The method extracts all countries based on region.
+     * @param con is used to attempting connection with the database
+     * @param regionn is used in order to take input for which region
+     * to be made use of for the table to be sorted with.
      */
     public ArrayList<Country> region_data(Connection con, String regionn)
     {
@@ -137,9 +162,15 @@ public class CountryMethod {
     }
 
     /**
-     * The following method is for World population
-     * @param con
-     * @return
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from Country class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the country code, country name, country
+     * continent, country region and country population and sorts the
+     * data by population in descending order (largest to smallest population).
+     * The method extracts N number of countries.
+     * @param con is used to attempting connection with the database
+     * @param limit defines the N number of countries
      */
     public ArrayList<Country> getTenCountry(Connection con, int limit)
     {
@@ -181,7 +212,17 @@ public class CountryMethod {
     }
 
     /**
-     * The following method is for Continent population
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from Country class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the country code, country name, country
+     * continent, country region and country population and sorts the
+     * data by population in descending order (largest to smallest population).
+     * The method extracts N number of countries.
+     * @param con is used to attempting connection with the database
+     * @param inContinent is used in order to take input for which
+     * continent to be made use of for the table to sorted with.
+     * @param limit defines the N number of countries
      */
     public ArrayList<Country> getTenCountriesByContinent(Connection con, String inContinent, int limit)
     {
@@ -223,6 +264,19 @@ public class CountryMethod {
         }
     }
 
+    /**
+     * The following method is to extract data from the world database
+     * using SQL statements and make use of setters from Country class
+     * in order to set appropriate variables with the extracted data.
+     * The method below extracts the country code, country name, country
+     * continent, country region and country population and sorts the
+     * data by population in descending order (largest to smallest population).
+     * The method extracts N number of countries.
+     * @param con is used to attempting connection with the database
+     * @param regionn is used in order to take input for which
+     * continent to be made use of for the table to sorted with.
+     * @param limit defines the N number of countries
+     */
     public ArrayList<Country> getTenCountriesByRegion(Connection con, String regionn, int limit)
     {
         try

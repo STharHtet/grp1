@@ -3,6 +3,12 @@ package com.napier.grp1;
 import java.sql.*;
 import java.util.ArrayList;
 
+
+/**
+ * The following App class is to call methods from other classes
+ * and use their methods to extract data from the database and display
+ * extracted data
+ */
 public class App {
     /**
      * Connection to MySQL database.
@@ -94,8 +100,10 @@ public class App {
         // Array Countries, Region, Continents with the population largest to smallest
         // Extract country in the world from a class
         ArrayList<Country> countries = cw.getCountry(a.con);
-        ArrayList<Country> continents = cw.getCountriesByContinent(a.con, "Asia");
-        ArrayList<Country> region = cw.region_data(a.con,"caribbean");
+        // Extract country in the continent from a class
+        ArrayList<Country> continents = cw.getCountriesByContinent(a.con, input_continent);
+        // Extract country in the region from a class
+        ArrayList<Country> region = cw.region_data(a.con, input_region);
         // Extract top ten countries in the world
         ArrayList<Country> tenCountries = cw.getTenCountry(a.con, limit);
         //Extract top ten countries from the continent
@@ -139,9 +147,9 @@ public class App {
         // Printing data
         System.out.println("All the countries in the world organised by largest population to smallest.");
         coutput.printPopulation(countries);
-        System.out.println("All the countries in a continent organised by largest population to smallest. (Asia)");
+        System.out.println("All the countries in a continent organised by largest population to smallest. (" + input_continent + ")");
         coutput.printPopulation(continents);
-        System.out.println("All the countries in a region organised by largest population to smallest. (Caribbean)");
+        System.out.println("All the countries in a region organised by largest population to smallest. (" + input_region + ")");
         coutput.printPopulation(region);
         // Printing data of the top 10 populated countries in the world
         System.out.println("The top 10 populated countries in the world.");

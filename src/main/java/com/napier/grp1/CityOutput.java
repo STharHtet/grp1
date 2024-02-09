@@ -3,10 +3,17 @@ package com.napier.grp1;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
 
+/**
+ * The following class is to store the method for printing out data
+ * relating to cities
+ */
 public class CityOutput {
     /**
-     * Prints a list of World sorted by population.
-     * @param dataoutput The list of countries to print.
+     * The following method is to display data from methods used for
+     * cities. There are 4 columns which are city name, country name, district name
+     * and city population that will be displayed.
+     * @param dataoutput is take input for which city method data
+     * to be displayed.
      */
     public void printPopulation(ArrayList<City> dataoutput)
     {
