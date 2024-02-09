@@ -1,7 +1,10 @@
 package com.napier.grp1;
 
-/** testing country
- * to represents country data
+/**
+ * The following class is to create getters and setters for
+ * appropriate variables for CountryMethod to work with.
+ * Variables have been set to private and
+ * getters and setters have been used for security reasons.
  */
 public class Country {
     public String getCity_name() {
@@ -52,13 +55,7 @@ public class Country {
         this.population = population;
     }
 
-    public int getCapital() {
-        return capital;
-    }
 
-    public void setCapital(int capital) {
-        this.capital = capital;
-    }
 
     /**
      * Country Code
