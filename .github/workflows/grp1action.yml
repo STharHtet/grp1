@@ -48,6 +48,7 @@ jobs:
           directory: ./target/site/jacoco
           flags: IntegrationTests # optional
           verbose: true # optional (default = false)
+          branch: master
   build:
     name: Build and Start Using docker-compose
     runs-on: ubuntu-22.04
