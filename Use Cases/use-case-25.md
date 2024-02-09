@@ -32,7 +32,7 @@ Demographic Researcher
 
 ### Trigger
 
-The population data in the World database must be accessible for the system to utilize.
+The organization requests the demographic researcher to make a report on comparing urban and rural population in each country.
 
 ## MAIN SUCCESS SCENARIO
 
@@ -40,14 +40,13 @@ The population data in the World database must be accessible for the system to u
 
 2. The system has access to the World Database.
 
-3. The system extracts the population information of the cities in each country from the given database.
+3. The system extracts the population of the cities that are living and no living for each country.
 
-4. The system extracts the population of the cities that are living and no living for each country.
-
-5. The system generates the table of tpopulation of the cities that are living and no living for each country.
+4. The system generates the table of the population of the cities that are living and no living for each country.
 
 ## EXTENSIONS
-	In step 2 of scenario which extracts the data, if the system stopped working then there will be an error prompt to display where the error has occurred in the program. The user then has the chance to fix the error and run the system again. 
+
+In the step 3 of scenario which extract the data, if the system cannot extract the data, then the user has to run the program again.
 
 ## SUB-VARIATIONS
 
@@ -55,4 +54,4 @@ None.
 
 ## SCHEDULE
 
-**DUE DATE**: [9th Feb 2024] Release v0.3
+**DUE DATE**: [16th Feb 2024] Release v0.4 
