@@ -17,6 +17,16 @@ jobs:
           distribution: 'adopt'
       - name: Unit Tests
         run: mvn -Dtest=com.napier.grp1.AppUnitTest test
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v2
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+        with:
+          # token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
+          directory: ./target/site/jacoco
+          flags: UnitTest # optional
+          verbose: true # optional (default = false)
+          branch: master
 
   IntegrationTests:
     name: Integration Tests
