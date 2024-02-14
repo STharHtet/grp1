@@ -26,7 +26,7 @@ jobs:
           directory: ./target/site/jacoco
           flags: UnitTest # optional
           verbose: true # optional (default = false)
-#          branch: master
+          branch: testing
 
   IntegrationTests:
     name: Integration Tests
@@ -58,7 +58,7 @@ jobs:
           directory: ./target/site/jacoco
           flags: IntegrationTests # optional
           verbose: true # optional (default = false)
-#          branch: master
+          branch: testing
   build:
     name: Build Run in Docker and Deploy Release
     runs-on: ubuntu-22.04
