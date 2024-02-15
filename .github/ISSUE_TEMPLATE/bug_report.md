@@ -1,39 +1,27 @@
----
-name: Bug report
-about: This is a bug report for our project
-title: ''
-labels: ''
-assignees: ''
 
----
+  <h1 align="center">Bug Report</h1>
 
 **Bug 1**
 
-A clear and concise description of what the bug is.
+The bug caused by using the incompatible version of Java which leads to docker openjdk not to run properly.  
 
 **To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+
+1. Create a new project using Java Version "21" in Intellij 
+2. Retrieve docker image for openjdk 
+3. There will be error message display in the console about using unmatched version of Java.
 
 **Expected behavior**
-A clear and concise description of what you expected to happen.
+The project will not be able to continue due to unmatched Java version which is "21".The updated version of docker image does not exist for the process. 
 
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: Windows 11
+ - OS: Windows 11/MacOs 
  - IDE: IntelliJ IDEA 
- - Version [e.g. 22]
-
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+ - Version 2023.3.2 (Ultimate Version)
 
 **Additional context**
-Add any other context about the problem here.
+None
+
