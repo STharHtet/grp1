@@ -8,6 +8,7 @@ assignees: ''
 ---
 
 **Bug 1**
+
 A clear and concise description of what the bug is.
 
 **To Reproduce**
@@ -24,8 +25,8 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 **Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
+ - OS: Windows 11
+ - IDE: IntelliJ IDEA 
  - Version [e.g. 22]
 
 **Smartphone (please complete the following information):**
