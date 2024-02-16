@@ -249,7 +249,7 @@ The bug caused by port issue in MAC devices when using localhost.
 
 1. Open the necessary files which contain the port number.
 2. Change the port number to 33060:3306.
-3. Red line appears in log about unavailable port.
+3. Redline appears in log about unavailable port.
 
 **Expected behavior**
 The program will not be able to run in Localhost on MAC devices.
