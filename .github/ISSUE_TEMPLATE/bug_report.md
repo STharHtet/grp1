@@ -209,19 +209,24 @@ None
 
 **Bug 7**
 
-The bug caused by merge collision.
+The bug caused by merge collision where the files disappeared.
 
 **To Reproduce**
 
-1. 
+1. Check out to one of the branches. 
+2. Click Merge to their respective main branch 
+3. Merge Collision will occur.
+4. Resolve the collision.
+5. Some coding/files will disappear. 
 
 **Expected behavior**
+When the bug occurs, the program will not run due to lack of necessary files. 
 
 
 **Screenshots**<br>
 
-<img src="./img_7.png" alt="Alt text" width="350" height="200" style="display:block; margin:auto;">
-<h5 align="center">Full Path File Location</h5>
+<img src="./.png" alt="Alt text" width="350" height="200" style="display:block; margin:auto;">
+<h5 align="center">Merge</h5>
 
 
 **Desktop (please complete the following information):**
@@ -230,10 +235,43 @@ The bug caused by merge collision.
 - Version 2023.3.2 (Ultimate Version)
 
 **Bug Fix**
-- 
+- Recreate and add the missing coding and files.
 
 **Additional context**
 
 None
+
+**Bug 8**
+
+The bug caused by port issue in MAC devices when using localhost.
+
+**To Reproduce**
+
+1. Open the necessary files which contain the port number.
+2. Change the port number to 33060:3306.
+3. Red line appears in log about unavailable port.
+
+**Expected behavior**
+The program will not be able to run in Localhost on MAC devices.
+
+
+**Screenshots**<br>
+
+<img src="./img_10.png" alt="Alt text" width="350" height="200" style="display:block; margin:auto;">
+<h5 align="center">Port Issue Error</h5>
+
+
+**Desktop (please complete the following information):**
+- OS: MacOs
+- IDE: IntelliJ IDEA
+- Version 2023.3.2 (Ultimate Version)
+
+**Bug Fix**
+- Change the port number to 33061 in the files that mentioned port number.
+
+**Additional context**
+
+None
+
 
 
