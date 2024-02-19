@@ -823,4 +823,278 @@ public class AppIntegrationTest{
         capoutput.printPopulation(capcitiestenregion);
     }
 
+    /**
+     * The population of people, people living in cities, and people not living in cities in each continent.
+     */
+    @Test
+    void testeachcontinent()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method eachcontinentmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output eachcontinentoutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> eachcontinenttest = eachcontinentmethod.eachcontinent(app.con);
+
+        // Testing the output is equals to the first rows of living in cities and not living in cities data in each continent
+        assertEquals("Asia", eachcontinenttest.get(0).getContinent_ppl(), "first row of the continent name is Asia");
+        assertEquals(3705025700L, eachcontinenttest.get(0).getCountry_total_population(), "first row of total population of Asia is 3,705,025,700");
+        assertEquals(697604103, eachcontinenttest.get(0).getCity_total_population(), "first row of total population living in city is 697,604,103");
+        assertEquals("18.83%", eachcontinenttest.get(0).getLiving_in_cities(), "first row of total population living in cities in % is 18.83%");
+        assertEquals(3007421597L , eachcontinenttest.get(0).getTotal_not_livingcites(), "first row of total population not living in cities is 3,007,421,597");
+        assertEquals("81.17%", eachcontinenttest.get(0).getNot_living_in_cities(), "first row of the total population not living in cities % is 81.17%");
+
+        // Testing the output is equals to the last rows of living in cities and not living in cities data in each continent
+        assertEquals("South America", eachcontinenttest.get(eachcontinenttest.size()-1).getContinent_ppl(), "last row of the continent name is South America");
+        assertEquals(345780000, eachcontinenttest.get(eachcontinenttest.size()-1).getCountry_total_population(), "last row of total population of South America is 345,780,000");
+        assertEquals(172037859, eachcontinenttest.get(eachcontinenttest.size()-1).getCity_total_population(), "last row of total population living in city is 172,037,859");
+        assertEquals("49.75%", eachcontinenttest.get(eachcontinenttest.size()-1).getLiving_in_cities(), "last row of total population living in cities in % is 49.75%");
+        assertEquals(173742141 , eachcontinenttest.get(eachcontinenttest.size()-1).getTotal_not_livingcites(), "last row of total population not living in cities is 173,742,141");
+        assertEquals("50.25%", eachcontinenttest.get(eachcontinenttest.size()-1).getNot_living_in_cities(), "last row of the total population not living in cities % is 50.25%");
+
+        // Testing get works or not
+        for (populationppl echcontinent : eachcontinenttest){
+            assertNotNull(echcontinent.getContinent_ppl(), "getter of continent_name variables shouldn't be null value");
+            assertTrue(echcontinent.getCountry_total_population() > -1 , "Population shouldn't be less than 0");
+            assertTrue(echcontinent.getCity_total_population() > -1 , "Population shouldn't be less than 0");
+            assertTrue(echcontinent.getTotal_not_livingcites() > -1 , "Population shouldn't be less than 0");
+            assertNotNull(echcontinent.getLiving_in_cities(), "getter of Living in cities variables shouldn't be null value");
+            assertNotNull(echcontinent.getNot_living_in_cities(), "getter of not living in cities variables shouldn't be null value");
+        }
+        assertNotNull(eachcontinenttest);
+        System.out.println("The population of people, people living in cities, and people not living in cities in each continent.");
+        eachcontinentoutput.printPopulationineachcontinent(eachcontinenttest);
+    }
+
+    /**
+     * The population of people, people living in cities, and people not living in cities in each region.
+     */
+    @Test
+    void testeachregion()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method eachregionmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output eachregionoutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> eachregiontest = eachregionmethod.eachregion(app.con);
+
+        // Testing the output is equals to the first rows of living in cities and not living in cities data in each region
+        assertEquals("Southern and Central Asia", eachregiontest.get(0).getRegion_ppl(), "first row of the region name is Southern and Central Asia");
+        assertEquals(1490776000, eachregiontest.get(0).getCountry_total_population(), "first row of total population of Southern and Central Asia is 1,490,776,000");
+        assertEquals(207688970, eachregiontest.get(0).getCity_total_population(), "first row of total population living in city is 207,688,970");
+        assertEquals("13.93%", eachregiontest.get(0).getLiving_in_cities(), "first row of total population living in cities in % is 13.93%");
+        assertEquals(1283087030, eachregiontest.get(0).getTotal_not_livingcites(), "first row of total population not living in cities is 1,283,087,030");
+        assertEquals("86.07%", eachregiontest.get(0).getNot_living_in_cities(), "first row of the total population not living in cities % is 81.17%");
+
+        // Testing the output is equals to the last rows of living in cities and not living in cities data in each region
+        assertEquals("Baltic Countries", eachregiontest.get(eachregiontest.size()-1).getRegion_ppl(), "last row of the region name is Baltic Countries");
+        assertEquals(7561900, eachregiontest.get(eachregiontest.size()-1).getCountry_total_population(), "last row of total population of Baltic Countries is 7,561,900");
+        assertEquals(2947140, eachregiontest.get(eachregiontest.size()-1).getCity_total_population(), "last row of total population living in city is 2,947,140");
+        assertEquals("38.97%", eachregiontest.get(eachregiontest.size()-1).getLiving_in_cities(), "last row of total population living in cities in % is 38.97%");
+        assertEquals(4614760, eachregiontest.get(eachregiontest.size()-1).getTotal_not_livingcites(), "last row of total population not living in cities is 4,614,760");
+        assertEquals("61.03%", eachregiontest.get(eachregiontest.size()-1).getNot_living_in_cities(), "last row of the total population not living in cities % is 61.03%");
+
+        // Testing get works or not
+        for (populationppl echregion : eachregiontest){
+            assertNotNull(echregion.getRegion_ppl(), "getter of region name variables shouldn't be null value");
+            assertTrue(echregion.getCountry_total_population() > -1 , "Population shouldn't be less than 0");
+            assertTrue(echregion.getCity_total_population() > -1 , "Population shouldn't be less than 0");
+            assertTrue(echregion.getTotal_not_livingcites() > -1 , "Population shouldn't be less than 0");
+            assertNotNull(echregion.getLiving_in_cities(), "getter of Living in cities variables shouldn't be null value");
+            assertNotNull(echregion.getNot_living_in_cities(), "getter of not living in cities variables shouldn't be null value");
+        }
+        assertNotNull(eachregiontest);
+        System.out.println("The population of people, people living in cities, and people not living in cities in each region.");
+        eachregionoutput.printPopulationineachregion(eachregiontest);
+    }
+
+    /**
+     * The population of people, people living in cities, and people not living in cities in each country.
+     */
+    @Test
+    void testeachcountry()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method eachcountrymethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output eachcountryoutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> eachcountrytest = eachcountrymethod.eachcountry(app.con);
+
+        // Testing the output is equals to the first rows of living in cities and not living in cities data in each country
+        assertEquals("Afghanistan", eachcountrytest.get(0).getCountry_name(), "first row of the country name is Afghanistan");
+        assertEquals(22720000, eachcountrytest.get(0).getCountry_total_population(), "first row of total population of Afghanistan is 22,720,000");
+        assertEquals(2332100, eachcountrytest.get(0).getCity_total_population(), "first row of total population living in city is 2,332,100");
+        assertEquals("10.26%", eachcountrytest.get(0).getLiving_in_cities(), "first row of total population living in cities in % is 10.26%");
+        assertEquals(20387900, eachcountrytest.get(0).getTotal_not_livingcites(), "first row of total population not living in cities is 20,387,900");
+        assertEquals("89.74%", eachcountrytest.get(0).getNot_living_in_cities(), "first row of the total population not living in cities % is 89.74%");
+
+        // Testing the output is equals to the last rows of living in cities and not living in cities data in each country
+        assertEquals("Palestine", eachcountrytest.get(eachcountrytest.size()-1).getCountry_name(), "last row of the country name is Palestine");
+        assertEquals(3101000, eachcountrytest.get(eachcountrytest.size()-1).getCountry_total_population(), "last row of total population of Palestine is 3,101,000");
+        assertEquals(902360, eachcountrytest.get(eachcountrytest.size()-1).getCity_total_population(), "last row of total population living in city is 902,360");
+        assertEquals("29.10%", eachcountrytest.get(eachcountrytest.size()-1).getLiving_in_cities(), "last row of total population living in cities in % is 29.10%");
+        assertEquals(2198640, eachcountrytest.get(eachcountrytest.size()-1).getTotal_not_livingcites(), "last row of total population not living in cities is 2,198,640");
+        assertEquals("70.90%", eachcountrytest.get(eachcountrytest.size()-1).getNot_living_in_cities(), "last row of the total population not living in cities % is 70.90%");
+
+        // Testing get works or not
+        for (populationppl echcountry : eachcountrytest){
+            assertNotNull(echcountry.getCountry_name(), "getter of region name variables shouldn't be null value");
+            assertTrue(echcountry.getCountry_total_population() > -1 , "Population shouldn't be less than 0");
+            assertTrue(echcountry.getCity_total_population() > -1 , "Population shouldn't be less than 0");
+            assertNotNull(echcountry.getLiving_in_cities(), "getter of Living in cities variables shouldn't be null value");
+            assertNotNull(echcountry.getNot_living_in_cities(), "getter of not living in cities variables shouldn't be null value");
+        }
+        assertNotNull(eachcountrytest);
+        System.out.println("The population of people, people living in cities, and people not living in cities in each country.");
+        eachcountryoutput.printPopulationineachcountry(eachcountrytest);
+    }
+
+    /**
+     * The population of the world
+     */
+    @Test
+    void testworldtotal()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method worldtotalmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output worldtotaloutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> worldtotaltest = worldtotalmethod.totalpopulationinworld(app.con);
+
+        // Testing the population of the world.
+        assertEquals(6078749450L, worldtotaltest.get(0).getWorld_total(), "test data of world total population is 6,078,749,450");
+        assertTrue(worldtotaltest.get(0).getWorld_total() > -1 , "Population shouldn't be less than 0");
+
+        assertNotNull(worldtotaltest);
+        System.out.println("The population of the world.");
+        worldtotaloutput.printPopulationinworld(worldtotaltest);
+    }
+    @Test
+    void testinacontinenttotal()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method acontinenttotalmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output acontinenttotaloutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> inacontinenttotaltest = acontinenttotalmethod.totalpopulationinacontinent(app.con, "Asia");
+
+        // Testing the population of a continent.
+        assertEquals(3705025700L, inacontinenttotaltest.get(0).getPopulationinacontinent(), "test data of a continent (Asia) total population is 3,705,025,700");
+        assertEquals("Asia", inacontinenttotaltest.get(0).getContinent_name(), "test data of a continent name is Asia");
+        assertTrue(inacontinenttotaltest.get(0).getWorld_total() > -1 , "Population shouldn't be less than 0");
+
+        assertNotNull(inacontinenttotaltest);
+        System.out.println("The population of a continent.");
+        acontinenttotaloutput.printPopulationinacontinent(inacontinenttotaltest);
+    }
+
+    /**
+     * The population of a region
+     */
+    @Test
+    void testinaregiontotal()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method aregiontotalmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output aregiontotaloutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> inaregiontotaltest = aregiontotalmethod.totalpopulationinaregion(app.con, "Eastern Asia");
+
+        // Testing the population of a continent.
+        assertEquals(1507328000, inaregiontotaltest.get(0).getPopulationinaregion(), "test data of a region (Eastern Asia) total population is 1,507,328,000");
+        assertEquals("Eastern Asia", inaregiontotaltest.get(0).getRegion_name(), "test data of a region name is Asia");
+        assertTrue(inaregiontotaltest.get(0).getPopulationinaregion() > -1 , "Population shouldn't be less than 0");
+
+        assertNotNull(inaregiontotaltest);
+        System.out.println("The population of a region.");
+        aregiontotaloutput.printPopulationinaregion(inaregiontotaltest);
+    }
+
+    /**
+     * The population of a country
+     */
+    @Test
+    void testinacountrytotal()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method acountrytotalmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output acountrytotaloutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> inacountrytotaltest = acountrytotalmethod.totalpopulationinacountry(app.con, "China");
+
+        // Testing the population of a country.
+        assertEquals(1277558000, inacountrytotaltest.get(0).getPopulationinacountry(), "test data of a country (China) total population is 1,277,558,000");
+        assertEquals("China", inacountrytotaltest.get(0).getCountry_name(), "test data of a country name is China");
+        assertTrue(inacountrytotaltest.get(0).getPopulationinaregion() > -1 , "Population shouldn't be less than 0");
+
+        assertNotNull(inacountrytotaltest);
+        System.out.println("The population of a country.");
+        acountrytotaloutput.printPopulationinacountry(inacountrytotaltest);
+    }
+
+    /**
+     * The population of a district
+     */
+    @Test
+    void testinadistricttotal()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method adistricttotalmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output adistricttotaloutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> inadistricttotaltest = adistricttotalmethod.totalpopulationinadistrict(app.con, "Maharashtra");
+
+        // Testing the population of a country.
+        assertEquals(23659433, inadistricttotaltest.get(0).getDistrict_total_population(), "test data of a district (Maharashtra) total population is 23,659,433");
+        assertEquals("Maharashtra", inadistricttotaltest.get(0).getDistrict_name(), "test data of a district name is Maharashtra");
+        assertTrue(inadistricttotaltest.get(0).getPopulationinaregion() > -1 , "Population shouldn't be less than 0");
+
+        assertNotNull(inadistricttotaltest);
+        System.out.println("The population of a district.");
+        adistricttotaloutput.printPopulationinadistrict(inadistricttotaltest);
+    }
+
+    /**
+     * The population of a city
+     */
+    @Test
+    void testinacitytotal()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        population_lastfeatures_method acitytotalmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output acitytotaloutput = new population_in_lastfeatures_output();
+        ArrayList<populationppl> inacitytotaltest = acitytotalmethod.totalpopulationinacity(app.con, "Melbourne");
+
+        // Testing the population of a country.
+        assertEquals(2865329, inacitytotaltest.get(0).getInacity_total_population(), "test data of a city (Melbourne) total population is 2,865,329");
+        assertEquals("Melbourne", inacitytotaltest.get(0).getCity_name(), "test data of a city name is Melbourne");
+        assertTrue(inacitytotaltest.get(0).getPopulationinaregion() > -1 , "Population shouldn't be less than 0");
+
+        assertNotNull(inacitytotaltest);
+        System.out.println("The population of a city.");
+        acitytotaloutput.printPopulationinacity(inacitytotaltest);
+    }
+
+    /**
+     * All the countries in the world organised by largest population to smallest.
+     */
+    @Test
+    void testGetLanguages()
+    {
+        assertNotNull(app.con, "connection shouldn't be null values"); //testing connection is not null value
+        populationoflanguagesmethod populationlanguages = new populationoflanguagesmethod();
+        populationwithlanguagesoutput languagesoutput = new populationwithlanguagesoutput();
+        ArrayList<languages> languagesdata = populationlanguages.countrylanguages(app.con);
+
+        // Testing the output is equals to the first rows of cities data in the world sorted by population
+        assertEquals("Chinese", languagesdata.get(0).getLanguages_data(), "first row of the language is Chinese");
+        assertEquals(1191843539, languagesdata.get(0).getPopulation_with_languages(), "first row of population for the languages is 1,191,843,539");
+        assertEquals("19.61%", languagesdata.get(0).getPercentage_population(), "first row of population for the languages in percentage is 19.61%");
+
+        // Testing the output is equals to the first rows of cities data in the world sorted by population
+        assertEquals("Arabic", languagesdata.get(languagesdata.size()-1).getLanguages_data(), "last row of the language is Arabic");
+        assertEquals(233839238, languagesdata.get(languagesdata.size()-1).getPopulation_with_languages(), "last row of population for the languages is 233,839,238");
+        assertEquals("3.85%", languagesdata.get(languagesdata.size()-1).getPercentage_population(), "last row of population for the languages in percentage is 3.85%");
+
+        // Testing get works or not
+        for (languages ldata : languagesdata){
+            assertNotNull(ldata.getLanguages_data(), "getter of languages data variables shouldn't be null value");
+            assertTrue(ldata.getPopulation_with_languages() > -1 , "Population shouldn't be less than 0");
+            assertNotNull(ldata.getPercentage_population(), "getter of percentage population variables shouldn't be null value");
+        }
+        assertNotNull(languagesdata);
+        System.out.println("Population of people who spoke these languages in percentage and organised by largest population to smallest.");
+        languagesoutput.printPopulationoflanguages(languagesdata);
+    }
 }

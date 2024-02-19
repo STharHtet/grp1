@@ -88,6 +88,12 @@ public class App {
         // Create a new capital city in the word object
         CapCityMethod capcity = new CapCityMethod();
         CapCityOutput capcityout = new CapCityOutput();
+        // For total population in each continent, region, country in living in cities and not living in cities
+        population_lastfeatures_method econtinentmethod = new population_lastfeatures_method();
+        population_in_lastfeatures_output econtinentoutput = new population_in_lastfeatures_output();
+        // For total population of people who spoke these languages
+        populationoflanguagesmethod plmethod = new populationoflanguagesmethod();
+        populationwithlanguagesoutput ploutput = new populationwithlanguagesoutput();
 
 
         // Input for Continent
@@ -147,6 +153,17 @@ public class App {
         ArrayList<CapCity> top_ten_capcities_continent = capcity.getTopTenCapCitiesByContinent(a.con, input_continent, limit);
         // Extract top ten capital cities by region
         ArrayList<CapCity> top_ten_capcities_region = capcity.getTopTenCapCitiesByRegion(a.con, input_region, limit);
+        // each continent method called
+        ArrayList<populationppl> eachcontinentpopu = econtinentmethod.eachcontinent(a.con);
+        ArrayList<populationppl> eachregionpopu = econtinentmethod.eachregion(a.con);
+        ArrayList<populationppl> eachcountrypopu = econtinentmethod.eachcountry(a.con);
+        ArrayList<populationppl> totalworldpopu = econtinentmethod.totalpopulationinworld(a.con);
+        ArrayList<populationppl> totalinacontinent = econtinentmethod.totalpopulationinacontinent(a.con, "Asia");
+        ArrayList<populationppl> totalinaregion = econtinentmethod.totalpopulationinaregion(a.con, "Eastern Asia");
+        ArrayList<populationppl> totalinacountry = econtinentmethod.totalpopulationinacountry(a.con, "China");
+        ArrayList<populationppl> totalinadistrict = econtinentmethod.totalpopulationinadistrict(a.con, "Maharashtra");
+        ArrayList<populationppl> totalinacity = econtinentmethod.totalpopulationinacity(a.con, "Melbourne");
+        ArrayList<languages> languageswithpopulation = plmethod.countrylanguages(a.con);
 
 
         // Printing data
@@ -213,6 +230,27 @@ public class App {
         // Printing data of top N populated capital cities in the region.
         System.out.println("The top 10 populated capital cities in a region. (" + input_region + ")");
         capcityout.printPopulation(top_ten_capcities_region);
+        // each continent output population with living in cities and not living in cities
+        System.out.println("The population of people, people living in cities, and people not living in cities in each continent.");
+        econtinentoutput.printPopulationineachcontinent(eachcontinentpopu);
+        System.out.println("The population of people, people living in cities, and people not living in cities in each region.");
+        econtinentoutput.printPopulationineachregion(eachregionpopu);
+        System.out.println("The population of people, people living in cities, and people not living in cities in each country");
+        econtinentoutput.printPopulationineachcountry(eachcountrypopu);
+        System.out.println("The population of the world");
+        econtinentoutput.printPopulationinworld(totalworldpopu);
+        System.out.println("The population of a continent.");
+        econtinentoutput.printPopulationinacontinent(totalinacontinent);
+        System.out.println("The population of a region");
+        econtinentoutput.printPopulationinaregion(totalinaregion);
+        System.out.println("The population of a country");
+        econtinentoutput.printPopulationinacountry(totalinacountry);
+        System.out.println("The population of a district");
+        econtinentoutput.printPopulationinadistrict(totalinadistrict);
+        System.out.println("The population of a city");
+        econtinentoutput.printPopulationinacity(totalinacity);
+        System.out.println("The population of people who spoke these languages");
+        ploutput.printPopulationoflanguages(languageswithpopulation);
 
 
 
