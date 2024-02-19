@@ -273,5 +273,36 @@ The program will not be able to run in Localhost on MAC devices.
 
 None
 
+**Bug 9**
+
+The bug caused by maven reload bug when changing to develop branch.
+
+**To Reproduce**
+
+1. From a current branch, checkout to the develop branch.
+2. A prompt message will appear asking to reload Maven project.
+3. Reload the Maven project to fix the error
+
+**Expected behavior**
+The entire program is shown in red lines, indicating that it contains various errors.
+
+
+**Screenshots**<br>
+
+<img src="./img_11.png" alt="Alt text" width="350" height="200" style="display:block; margin:auto;">
+<h5 align="center">Reload Maven Project Error</h5>
+
+
+**Desktop (please complete the following information):**
+- OS: Windows 11/MacOs
+- IDE: IntelliJ IDEA
+- Version 2023.3.2 (Ultimate Version)
+
+**Bug Fix**
+- Click on 'Reload Maven Project'. The error is currently unknown to why it occurs and only occurs in some circumstances.
+
+**Additional context**
+
+None
 
 
