@@ -82,9 +82,9 @@ public class population_lastfeatures_method {
             Statement stmt = con.createStatement();
             // Create string for SQL statement
             String strSelect =
-                    "SELECT COUTP.Name, COUTP.CityTotalPopulation, CUOP.CountryTotalPopulation, CUOP.CountryTotalPopulation - COUTP.CityTotalPopulation AS `TotalNotlivingCities`, "
-                            + "CONCAT(FORMAT((COUTP.CityTotalPopulation / CUOP.CountryTotalPopulation) * 100, 2), '%') AS `LivingInCities`, "
-                            + "CONCAT(FORMAT((CUOP.CountryTotalPopulation - COUTP.CityTotalPopulation) / CUOP.CountryTotalPopulation * 100, 2), '%') AS `NotLivingInCities` FROM "
+                    "SELECT COUTP.Name, COUTP.CityTotalPopulation, CUOP.CountryTotalPopulation, IF(COUTP.CityTotalPopulation > CUOP.CountryTotalPopulation, 0, CUOP.CountryTotalPopulation - COUTP.CityTotalPopulation) AS `TotalNotlivingCities`, "
+                            + "CONCAT(FORMAT(IF(COUTP.CityTotalPopulation > CUOP.CountryTotalPopulation, 100, (COUTP.CityTotalPopulation / CUOP.CountryTotalPopulation) * 100), 2), '%') AS `LivingInCities`, "
+                            + "CONCAT(FORMAT(IF(COUTP.CityTotalPopulation > CUOP.CountryTotalPopulation, 0, (CUOP.CountryTotalPopulation - COUTP.CityTotalPopulation) / CUOP.CountryTotalPopulation * 100), 2), '%') AS `NotLivingInCities` FROM "
                             + "(SELECT country.Name, SUM(city.Population) AS `CityTotalPopulation` FROM city, country WHERE city.CountryCode = country.Code GROUP BY country.Name) COUTP, "
                             + "(SELECT country.Name, SUM(country.Population) AS `CountryTotalPopulation` FROM country GROUP BY country.Name) CUOP WHERE COUTP.Name = CUOP.Name ";
 
