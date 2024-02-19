@@ -8,6 +8,12 @@ import java.util.ArrayList;
  */
 public class populationwithlanguagesoutput {
 
+    /**
+     * Prints a formatted table displaying information about languages and the population
+     * of people who speak those languages, along with the corresponding percentages.
+     *
+     * @param dataoutput An ArrayList of 'languages' objects containing language data.
+     */
     public void printPopulationoflanguages(ArrayList<languages> dataoutput) {
         // Print top border
         System.out.println("+---------------------+---------------------+---------------------+--------------+");

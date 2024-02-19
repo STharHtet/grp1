@@ -10,6 +10,16 @@ import java.util.ArrayList;
  */
 public class populationoflanguagesmethod {
 
+    /**
+     * Retrieves language-related data, including the total population and percentage
+     * for specific languages (Chinese, English, Hindi, Spanish, Arabic) across countries.
+     *
+     * @param con The database connection to execute the SQL query.
+     * @return An ArrayList of 'languages' objects containing language data.
+     *         Each object includes language name, total population with the language,
+     *         and the percentage of the total population speaking the language.
+     *         Returns null in case of an exception or failure.
+     */
     public ArrayList<languages> countrylanguages(Connection con)
     {
         try

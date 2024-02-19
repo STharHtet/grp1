@@ -12,7 +12,15 @@ import java.util.ArrayList;
  * the print method
  */
 public class population_lastfeatures_method {
-
+    /**
+     * Retrieves population details for each continent, including the total population,
+     * population living in cities, and population not living in cities, based on the data
+     * stored in the provided database connection.
+     *
+     * @param con The database connection used for retrieving population information.
+     * @return An ArrayList of populationppl objects representing population details for each continent.
+     *         Returns null in case of an error.
+     */
     public ArrayList<populationppl> eachcontinent(Connection con) {
         try {
             Statement stmt = con.createStatement();
@@ -45,6 +53,15 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves population details for each region, including the total population,
+     * population living in cities, and population not living in cities, based on the data
+     * stored in the provided database connection.
+     *
+     * @param con The database connection used for retrieving population information.
+     * @return An ArrayList of populationppl objects representing population details for each continent.
+     *         Returns null in case of an error.
+     */
     public ArrayList<populationppl> eachregion(Connection con) {
         try {
             Statement stmt = con.createStatement();
@@ -77,6 +94,15 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves population details for each country, including the total population,
+     * population living in cities, and population not living in cities, based on the data
+     * stored in the provided database connection.
+     *
+     * @param con The database connection used for retrieving population information.
+     * @return An ArrayList of populationppl objects representing population details for each continent.
+     *         Returns null in case of an error.
+     */
     public ArrayList<populationppl> eachcountry(Connection con) {
         try {
             Statement stmt = con.createStatement();
@@ -110,6 +136,13 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves the total world population by summing up the population of all countries.
+     *
+     * @param con The database connection.
+     * @return An ArrayList containing a populationppl object with the total world population.
+     *         Returns null in case of an exception or failure to retrieve the data.
+     */
     public ArrayList<populationppl> totalpopulationinworld(Connection con) {
         try {
             Statement stmt = con.createStatement();
@@ -134,6 +167,13 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves the total continent population by summing up the population of a continent.
+     *
+     * @param con The database connection.
+     * @return An ArrayList containing a populationppl object with the total continent population.
+     *         Returns null in case of an exception or failure to retrieve the data.
+     */
     public ArrayList<populationppl> totalpopulationinacontinent(Connection con, String totalinacontinent) {
         try {
 
@@ -163,6 +203,14 @@ public class population_lastfeatures_method {
             return null;
         }
     }
+
+    /**
+     * Retrieves the total region population by summing up the population of a region.
+     *
+     * @param con The database connection.
+     * @return An ArrayList containing a populationppl object with the total region population.
+     *         Returns null in case of an exception or failure to retrieve the data.
+     */
     public ArrayList<populationppl> totalpopulationinaregion(Connection con, String totalinaregion) {
         try {
 
@@ -193,6 +241,13 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves the total country population by summing up the population of a country.
+     *
+     * @param con The database connection.
+     * @return An ArrayList containing a populationppl object with the total country population.
+     *         Returns null in case of an exception or failure to retrieve the data.
+     */
     public ArrayList<populationppl> totalpopulationinacountry(Connection con, String totalinacountry) {
         try {
 
@@ -223,6 +278,13 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves the total district population by summing up the population of a district.
+     *
+     * @param con The database connection.
+     * @return An ArrayList containing a populationppl object with the total district population.
+     *         Returns null in case of an exception or failure to retrieve the data.
+     */
     public ArrayList<populationppl> totalpopulationinadistrict(Connection con, String totalinadistrict) {
         try {
 
@@ -253,6 +315,13 @@ public class population_lastfeatures_method {
         }
     }
 
+    /**
+     * Retrieves the total city population by summing up the population of a city.
+     *
+     * @param con The database connection.
+     * @return An ArrayList containing a populationppl object with the total city population.
+     *         Returns null in case of an exception or failure to retrieve the data.
+     */
     public ArrayList<populationppl> totalpopulationinacity(Connection con, String totalinacity) {
         try {
 
