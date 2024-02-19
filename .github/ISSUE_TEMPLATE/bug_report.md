@@ -225,9 +225,7 @@ When the bug occurs, the program will not run due to lack of necessary files.
 
 **Screenshots**<br>
 
-<img src="./.png" alt="Alt text" width="350" height="200" style="display:block; margin:auto;">
-<h5 align="center">Merge</h5>
-
+None
 
 **Desktop (please complete the following information):**
 - OS: Windows 11/MacOs
