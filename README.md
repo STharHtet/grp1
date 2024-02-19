@@ -7,6 +7,29 @@
 * Release [![Releases](https://img.shields.io/github/release/STharHtet/grp1/all.svg?style=flat-square)](https://github.com/STharHtet/grp1/releases)
 * Code Coverage [![codecov](https://codecov.io/gh/STharHtet/grp1/graph/badge.svg?token=KF9IMAX3QR)](https://codecov.io/gh/STharHtet/grp1)
 
+# Members list
+| Team members     | Contact                   | Roles            |
+|------------------|---------------------------|------------------|
+| S’ Thar Htet     | 40667691@live.napier.ac.uk| Product Owner    |
+| Aye Khit Bo      | 40667671@live.napier.ac.uk| Scrum Master     |
+| Ye’ Win Thant    | 40667685@live.napier.ac.uk| Lab and Tech Lead|
+| Han Htike Soe    | 40667702@live.napier.ac.uk| Lab and Tech Lead|
+| Mya Phoo Nyo     | 40632025@live.napier.ac.uk| Documentation    |
+| Phyo Min Thaw    | 40667682@live.napier.ac.uk| Documentation    |
+
+# Members Contribution
+| Members                  | Code Review 1 | Code Review 2 | Code Review 3 | Code Review 4 | Code Review 5 |
+|--------------------------|---------------|---------------|---------------|---------------|---------------|
+| S' Thar Htet (40667691)  | 16.6%         | 16.6%         | 16.6%         | 20.0%         | 16.6%         |
+| Ye' Win Thant (40667685) | 16.6%         | 16.6%         | 16.6%         | 10.0%         | 16.6%         |
+| Han Htike Soe (40667702) | 16.6%         | 16.6%         | 16.6%         | 30.0%         | 16.6%         |
+| Phyo Min Thaw (40667682) | 16.6%         | 16.6%         | 16.6%         | 10.0%         | 16.6%         |
+| Mya Phoo Nyo (40632025)  | 16.6%         | 16.6%         | 16.6%         | 20.0%         | 16.6%         |
+| Aye Khit Bo (40667671)   | 16.6%         | 16.6%         | 16.6%         | 10.0%         | 16.6%         |
+| Total                    | 100.0%        | 100.0%        | 100.0%        | 100.0%        | 100.0%        |
+
+
+
 # Final Output
 All the countries in the world organised by largest population to smallest table.
 ![img.png](final_output/img12.png)
