@@ -32,7 +32,9 @@
 
 
 # Features Developed
-The table below describes the features that have been developed for the project. The full output can be seen in GitHub Actions.
+The table below describes the features that have been developed for the project. The full output can be seen in GitHub Actions. 
+
+**32 requirements of 32 have been implemented which is 100%.**
 
 | ID | Features                                                                                                                                                               | Met | Screenshots                                                     |
 |----|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----|-----------------------------------------------------------------|
