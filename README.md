@@ -6,7 +6,8 @@
 * License [![LICENSE](https://img.shields.io/github/license/STharHtet/grp1.svg?style=flat-square)](https://github.com/STharHtet/grp1/blob/master/LICENSE)
 * Release [![Releases](https://img.shields.io/github/release/STharHtet/grp1/all.svg?style=flat-square)](https://github.com/STharHtet/grp1/releases)
 * Code Coverage [![codecov](https://codecov.io/gh/STharHtet/grp1/graph/badge.svg?token=KF9IMAX3QR)](https://codecov.io/gh/STharHtet/grp1)
-* Kanban/Sprint board [Zube](https://zube.io/group-1-2/group-1/w/workspace-1/sprints)
+* Kanban/Sprint board [![Zube Badge](https://img.shields.io/badge/Zube-Kanban/Sprint-blue.svg)](https://zube.io/group-1-2/group-1/w/workspace-1/sprints)
+
 
 
 # Members list
