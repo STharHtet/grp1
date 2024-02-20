@@ -1,4 +1,4 @@
-name: A workflow for my Unit testing and Integration testing
+name: The workflow for our project
 on: push
 
 jobs:
